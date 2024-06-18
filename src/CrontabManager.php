@@ -17,13 +17,13 @@ use Hyperf\Di\Annotation\Inject;
 class CrontabManager extends \Hyperf\Crontab\CrontabManager
 {
     /**
-     * @var TaskServiceInterface
+     * @var ScheduleInterface
      * @Inject()
      */
-    protected $taskService;
+    protected $schedule;
     
     public function getCrontabs(): array
     {
-        return array_merge($this->crontabs, $this->taskService->getTaskList());
+        return array_merge($this->crontabs, $this->schedule->getTaskList());
     }
 }
