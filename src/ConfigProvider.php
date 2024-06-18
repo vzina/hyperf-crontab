@@ -19,7 +19,7 @@ class ConfigProvider
             'dependencies' => [
                 \Hyperf\Crontab\Strategy\Executor::class => Executor::class,
                 \Hyperf\Crontab\CrontabManager::class => CrontabManager::class,
-                TaskServiceInterface::class => TaskService::class,
+                ScheduleInterface::class => Schedule::class,
             ],
             'commands' => [
             ],

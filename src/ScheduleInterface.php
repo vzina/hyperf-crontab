@@ -1,6 +1,6 @@
 <?php
 /**
- * TaskServiceInterface.php
+ * ScheduleInterface.php
  * PHP version 7
  *
  * @package hyperf-skeleton
@@ -14,7 +14,7 @@ namespace Vzina\Crontab;
 
 use Hyperf\Crontab\Crontab;
 
-interface TaskServiceInterface
+interface ScheduleInterface
 {
     /**
      * 获取任务列表

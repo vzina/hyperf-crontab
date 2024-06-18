@@ -35,6 +35,7 @@ class Executor extends \Hyperf\Crontab\Strategy\Executor
         $runnable = null;
         switch ($crontab->getType()) {
             case 'closure':
+                /** @var \Opis\Closure\SerializableClosure $runnable */
                 $runnable = $crontab->getCallback();
                 break;
             case 'callback':
@@ -79,7 +80,7 @@ class Executor extends \Hyperf\Crontab\Strategy\Executor
         $runnable && Timer::after($diff > 0 ? $diff * 1000 : 1, $runnable);
     }
 
-    protected function catchToExecute(Crontab $crontab, ?Closure $runnable): Closure
+    protected function catchToExecute(Crontab $crontab, ?callable $runnable): Closure
     {
         return function () use ($crontab, $runnable) {
             $throwable = null;

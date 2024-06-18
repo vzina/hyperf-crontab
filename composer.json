@@ -19,7 +19,8 @@
     },
     "require": {
         "php": ">=7.3",
-	    "hyperf/crontab": "^2.2"
+	    "hyperf/crontab": "^2.2",
+        "opis/closure": "^3.6"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -40,7 +41,7 @@
         "cs-fix": "php-cs-fixer fix $1"
     },
     "extra": {
-	"branch-alias": {
+	    "branch-alias": {
             "dev-main": "1.0.x-dev"
         },
         "hyperf": {
