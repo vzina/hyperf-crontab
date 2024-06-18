@@ -11,6 +11,7 @@ composer require vzina/hyperf-crontab
 - 定义任务服务
 
 ```php
+use Hyperf\Crontab\Crontab;
 use Vzina\Crontab\Schedule;
 use Vzina\Crontab\ScheduleInterface;
 
